@@ -7,6 +7,16 @@
   <version>1.0-SNAPSHOT</version>
   <name>SimpleTomcatWebApp Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  <distributionManagement>
+<snapshot>
+<id>nexus-snapshots</id>
+<url>http://44.200.130.124:8081/repository/maven-snapshots/</url>
+</snapshot>
+<releases>
+<id>nexus-releases</id>
+<url>http://44.200.130.124:8081/repository/maven-releases/</url>
+</releases>
+</distributionManagement>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
