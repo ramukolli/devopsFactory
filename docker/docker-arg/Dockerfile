@@ -1,4 +1,8 @@
-FROM alpine:3.6
-ENV NAME=World
-COPY greeter.sh /
-CMD ["/greeter.sh"]
+FROM busybox
+ARG ARGNAME=default
+RUN env
+RUN echo "ARGNAME=${ARGNAME}"
+RUN echo "ARG Prefix=${ARGNAME%_*}" \
+ && echo "ARG Suffix=${ARGNAME#*_}"
+RUN myARG=$ARGNAME
+CMD env
