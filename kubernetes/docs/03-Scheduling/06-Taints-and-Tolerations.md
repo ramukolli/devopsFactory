@@ -1,5 +1,5 @@
 # Taints and Tolerations
-  - Take me to [Video Tutorial](https://kodekloud.com/topic/taints-and-tolerations-2/)
+ 
   
 In this section, we will take a look at taints and tolerations.
 - Pod to node relationship and how you can restrict what pods are placed on what nodes.
@@ -27,6 +27,9 @@ In this section, we will take a look at taints and tolerations.
   - **`NoSchedule`**
   - **`PreferNoSchedule`**
   - **`NoExecute`**
+  There are three taint effects no schedule which means the pods will not be scheduled on the node.
+  Prefer No schedule which means the system will try to avoid placing a pod on the node but that is not guaranteed.
+  No execute. Which means that new pods will not be scheduled on the node and existing pods on the node if any will be evicted if they do not tolerate the taint
   
   ![tn](../../images/tn.PNG)
   
