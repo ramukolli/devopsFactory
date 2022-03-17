@@ -15,9 +15,7 @@ The service also gets an IP address assigned to it whenever a pod tries to reach
 
 - Kube-Proxy is a process that runs on each node in the kubernetes cluster.
 Its job is to look for new services and every time a new service is created it creates the appropriate rules on each node to forward traffic to those services to the backend pods.One way it does this is using IPTABLES rules.
-In this case it creates an IP tables rule on each node in the cluster to forward traffic heading to the IP of the service which is 10.96.0.12 to the IP of the actual pod which is
-
-10.32.0.15. 
+In this case it creates an IP tables rule on each node in the cluster to forward traffic heading to the IP of the service which is 10.96.0.12 to the IP of the actual pod which is 10.32.0.15. 
   
   ![kube-proxy](../../images/kube-proxy.PNG)
   
