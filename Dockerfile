@@ -3,7 +3,7 @@ FROM centos
 MAINTAINER aksarav@middlewareinventory.com
 
 RUN mkdir /opt/tomcat/
-
+RUN useradd raju
 WORKDIR /opt/tomcat
 RUN curl -O https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.39/bin/apache-tomcat-9.0.39.tar.gz
 RUN tar xvfz apache-tomcat-9.0.39.tar.gz
@@ -21,5 +21,6 @@ WORKDIR /opt/tomcat/webapps
 COPY target/SimpleTomcatWebApp.war /opt/tomcat/webapps
 
 EXPOSE 8080
-
+USER raju
 CMD ["/opt/tomcat/bin/catalina.sh", "run"]
+
