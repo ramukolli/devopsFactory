@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools { 
-        maven 'maven' 
+        maven 'MAVEN' 
         
     }
     stages {
@@ -32,7 +32,7 @@ pipeline {
                 }
             }
             steps {
-              deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://13.233.167.121:8080/')], contextPath: 'sampletomcatwebapp', war: '**/*.war'  
+              deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://http://3.110.157.131:8080/')], contextPath: 'sampletomcatwebapp', war: '**/*.war'  
            }
             
         }
